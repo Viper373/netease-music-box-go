@@ -139,7 +139,7 @@ func (b *Box) UpdateMarkdown(ctx context.Context, title, filename string, lines 
     newMd.WriteString("```text\n")
     newMd.WriteString(strings.Join(lines, "\n"))
     newMd.WriteString("\n```")
-    newMd.WriteString("\n<!-- Powered by https://github.com/llnancy/netease-music-box . -->\n")
+    newMd.WriteString("\n<!-- Powered by https://github.com/Viper373/netease-music-box-go . -->\n")
     newMd.Write(after)
 
     err = ioutil.WriteFile(filename, newMd.Bytes(), os.ModeAppend)

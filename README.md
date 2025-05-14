@@ -44,18 +44,18 @@
 2. 创建一个 GitHub Token，需要勾选 `gist` 权限，复制生成的 Token (https://github.com/settings/tokens/new)
 3. 获取网易云音乐用户 ID (https://music.163.com)
     - ID 为个人主页页面（`https://music.163.com/#/user/home?id=xxx`），`id` 后紧跟的那串数字
-    ![USER_ID](https://github.com/llnancy/netease-music-box/blob/master/assets/user_id.png)
+    ![NETEASE_USER_ID](https://github.com/llnancy/netease-music-box-go/blob/master/assets/user_id.png)
 4. 获取网易云音乐用户 Token
     - 在登录态下打开浏览器开发者工具，查看 Cookie，获取 `key` 为 `MUSIC_U` 的 `value`
-    ![USER_TOKEN](https://github.com/llnancy/netease-music-box/blob/master/assets/user_token.png)
+    ![NETEASE_USER_TOKEN](https://github.com/llnancy/netease-music-box-go/blob/master/assets/user_token.png)
 
 ### 🚀 安装
 
 1. Fork 这个仓库
 2. 进入 Fork 后的仓库，启用 Github Actions
 3. 编辑 `.github/workflows/schedule.yml` 文件，确保如下环境变量已传递：
-    - `USER_ID`：网易云音乐用户 ID
-    - `USER_TOKEN`：网易云音乐用户 Token
+    - `NETEASE_USER_ID`：网易云音乐用户 ID
+    - `NETEASE_USER_TOKEN`：网易云音乐用户 Token
     - `GH_TOKEN`：GitHub Token
     - 其它可选变量：`GIST_FILENAME`、`UPDATE_OPTION`、`MARKDOWN_FILE`、`MARKDOWN_START_TAG`、`MARKDOWN_END_TAG`
 4. 在项目的 `Settings > Secrets and variables > Actions` 中创建上述变量
