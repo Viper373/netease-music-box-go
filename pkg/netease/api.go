@@ -58,6 +58,7 @@ func GetUserRecord(userID, userToken string) ([]WeekData, error) {
     }
     defer resp.Body.Close()
     body, _ := ioutil.ReadAll(resp.Body)
+    fmt.Printf("网易云API返回内容: %s\n", string(body))
     var record RecordResp
     if err := json.Unmarshal(body, &record); err != nil {
         return nil, err
