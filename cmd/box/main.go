@@ -4,7 +4,7 @@ import (
     "context"
     "fmt"
     "os"
-    "netease-music-box/pkg/neteasebox"
+    "netease-music-box-go/pkg/neteasebox"
 )
 
 // 获取环境变量，若不存在则返回默认值
@@ -21,8 +21,7 @@ func main() {
     userToken := os.Getenv("USER_TOKEN")
     gistID := os.Getenv("GIST_ID")
     ghToken := os.Getenv("GH_TOKEN")
-    updateOption := getEnv("UPDATE_OPTION", "GIST")
-    gistFilename := getEnv("GIST_FILENAME", "netease-music-box.md")
+    updateOption := getEnv("UPDATE_OPTION", "GIST_AND_MARKDOWN")
     markdownFile := getEnv("MARKDOWN_FILE", "README.md")
     startTag := getEnv("MARKDOWN_START_TAG", "<!-- netease-music-box start -->")
     endTag := getEnv("MARKDOWN_END_TAG", "<!-- netease-music-box end -->")

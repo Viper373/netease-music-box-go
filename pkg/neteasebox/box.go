@@ -7,8 +7,8 @@ import (
     "io/ioutil"
     "os"
     "strings"
-    "netease-music-box/pkg/netease"
-    githubapi "netease-music-box/pkg/github"
+    "netease-music-box-go/pkg/netease"
+    githubapi "netease-music-box-go/pkg/github"
 )
 
 // BoxStyle 排行榜样式结构体
