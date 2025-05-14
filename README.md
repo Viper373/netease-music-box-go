@@ -23,7 +23,7 @@
 <td>
 
 <!-- netease-music-box start -->
-#### <a href="https://gist.github.com/0de3f9fc7f3078a800f738e25eccea54" target="_blank">🎵 我最近一周的听歌排行</a>
+#### <a href="https://gist.github.com/0de3f9fc7f3078a800f738e25eccea54" target="_blank">🎵 Weekly Listen Music Rank</a>
 ```text
 🥇 这，就是爱 - 张杰			5次    
 🥈 My Type - T...			4次    
@@ -40,7 +40,7 @@
 
 ### 🎒 前置工作
 
-1. 创建一个公开的 Github Gist (https://gist.github.com)
+1. 创建一个公开的 Github Gist (https://gist.github.com)，名为 `🎵 Weekly Listen Music Rank`，复制生成的 Gist ID (https://gist.github.com/0de3f9fc7f3078a800f738e25eccea54)
 2. 创建一个 GitHub Token，需要勾选 `gist` 权限，复制生成的 Token (https://github.com/settings/tokens/new)
 3. 获取网易云音乐用户 ID (https://music.163.com)
     - ID 为个人主页页面（`https://music.163.com/#/user/home?id=xxx`），`id` 后紧跟的那串数字
