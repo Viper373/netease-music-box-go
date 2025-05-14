@@ -17,8 +17,8 @@ func getEnv(key, defaultVal string) string {
 }
 
 func main() {
-	userID := os.Getenv("USER_ID")
-	userToken := os.Getenv("USER_TOKEN")
+	userID := os.Getenv("NETEASE_USER_ID")
+	userToken := os.Getenv("NETEASE_USER_TOKEN")
 	ghToken := os.Getenv("GH_TOKEN")
 	gistID := os.Getenv("GIST_ID")
 	updateOption := getEnv("UPDATE_OPTION", "GIST_AND_MARKDOWN")
