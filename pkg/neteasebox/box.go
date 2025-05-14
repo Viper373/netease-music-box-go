@@ -85,7 +85,7 @@ func (b *Box) GenerateGistLines(ctx context.Context, weekData []netease.WeekData
 // return: string
 func (b *Box) ConstructLine(ctx context.Context, idx int, d netease.WeekData, icons []string) string {
     artists := []string{}
-    for _, a := range d.Song.Artists {
+    for _, a := range d.Song.Ar {
         artists = append(artists, a.Name)
     }
     name := d.Song.Name + " - " + strings.Join(artists, "/")

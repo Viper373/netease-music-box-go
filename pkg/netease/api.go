@@ -11,11 +11,12 @@ import (
 //
 // 包含歌曲名和歌手信息
 //
+type Artist struct {
+    Name string `json:"name"`
+}
 type Song struct {
-    Name   string `json:"name"`
-    Artists []struct {
-        Name string `json:"name"`
-    } `json:"ar"`
+    Name string   `json:"name"`
+    Ar   []Artist `json:"ar"`
 }
 
 // WeekData 一周听歌数据结构体
