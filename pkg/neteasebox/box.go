@@ -11,19 +11,12 @@ import (
     githubapi "netease-music-box-go/pkg/github"
 )
 
-// BoxStyle 排行榜样式结构体
-//
-type BoxStyle struct {
-    // 预留样式参数，便于后续扩展
-}
-
 // Box 封装网易云和 Gist/Markdown 操作
 //
 type Box struct {
     UserID    string
     UserToken string
     GhToken   string
-    Style     BoxStyle
 }
 
 // NewBox 创建 Box 实例
@@ -32,14 +25,12 @@ type Box struct {
 //   - userID: 网易云用户ID
 //   - userToken: 网易云用户Token
 //   - ghToken: GitHub Token
-//   - style: BoxStyle 样式
 // return: Box 实例
-func NewBox(userID, userToken, ghToken string, style BoxStyle) *Box {
+func NewBox(userID, userToken, ghToken string) *Box {
     return &Box{
         UserID:    userID,
         UserToken: userToken,
         GhToken:   ghToken,
-        Style:     style,
     }
 }
 

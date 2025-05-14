@@ -37,8 +37,8 @@ type RecordBody struct {
 // RecordResp API完整返回结构体
 //
 type RecordResp struct {
-    Code int        `json:"code"`
-    Body RecordBody `json:"body"`
+    Code     int         `json:"code"`
+    WeekData []WeekData  `json:"weekData"`
 }
 
 // GetUserRecord 获取网易云用户一周听歌记录
@@ -67,5 +67,5 @@ func GetUserRecord(userID, userToken string) ([]WeekData, error) {
     if record.Code != 200 {
         return nil, fmt.Errorf("netease api error: %s", string(body))
     }
-    return record.Body.WeekData, nil
+    return record.WeekData, nil
 } 

@@ -35,9 +35,8 @@ func main() {
 	} else {
 		updateGist = true
 	}
-
-	style := neteasebox.BoxStyle{}
-	box := neteasebox.NewBox(userID, userToken, ghToken, style)
+	
+	box := neteasebox.NewBox(userID, userToken, ghToken)
 	ctx := context.Background()
 	lines, err := box.GetStats(ctx)
 	if err != nil {
@@ -58,7 +57,7 @@ func main() {
 	if updateMarkdown && markdownFile != "" {
 		title := filename
 		if updateGist {
-			title = fmt.Sprintf(`#### <a href=\"https://gist.github.com/%s\" target=\"_blank\">%s</a>`, gistID, filename)
+			title = fmt.Sprintf("#### <a href=\"https://gist.github.com/%s\" target=\"_blank\">%s</a>", gistID, filename)
 		} else {
 			title = fmt.Sprintf("#### %s", filename)
 		}
