@@ -80,9 +80,9 @@ func (b *Box) ConstructLine(ctx context.Context, idx int, d netease.WeekData, ic
         artists = append(artists, a.Name)
     }
     name := d.Song.Name + " - " + strings.Join(artists, "/")
-    flag := len([]rune(name)) > 11
+    flag := len([]rune(name)) > 15
     if flag {
-        name = string([]rune(name)[:11]) + "..."
+        name = string([]rune(name)[:15]) + "..."
     }
     tab := "\t\t\t"
     if len([]rune(name)) <= 8 {
